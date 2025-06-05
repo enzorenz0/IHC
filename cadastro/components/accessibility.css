@@ -1,0 +1,32 @@
+.accessibility-panel {
+  position: fixed;
+  bottom: var(--spacing-lg);
+  right: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  z-index: 100;
+}
+.accessibility-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--white);
+  border: 1px solid var(--gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  color: var(--text-color);
+  transition: all var(--transition-fast);
+}
+.accessibility-btn:hover {
+  background-color: var(--gray-light);
+  color: var(--secondary-color);
+  transform: scale(1.4);
+}
+.accessibility-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

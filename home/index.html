@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthCore - Agendamento</title>
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <header class="header">
+      <div class="contact-info">
+        <a href="tel:+6199999999" class="phone-number">(61) 99999-9999</a>
+      </div>
+      <div class="logo">
+        <img src="../assets/logo.png" alt="HealthCore Logo" class="logo-image">
+      </div>
+      <div class="language-selector">
+        <select class="language-btn" id="language-select">
+          <option value="pt" data-image="../assets/brazil-flag.svg">Português</option>
+          <option value="en" data-image="../assets/usa.png">Inglês</option>
+        </select>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <h2 class="page-title">Agendamento</h2>
+        
+        <div class="appointment-container">
+          <div class="form-section">
+            <div class="form-group">
+              <label for="specialty">Especialidade</label>
+              <div class="select-wrapper">
+                <div class="select-icon specialty-icon"></div>
+                <select id="specialty" name="specialty">
+                  <option value="Neurologista">Neurologista</option>
+                  <option value="Cardiologia">Cardiologia</option>
+                  <option value="Pediatria">Pediatria</option>
+                  <option value="Oftalmologia">Oftalmologia</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="doctor">Médico disponível</label>
+              <div class="select-wrapper">
+                <div class="select-icon doctor-icon"></div>
+                <select id="doctor" name="doctor">
+                  <option value="1">Dr. Paulo Muzy</option>
+                  <option value="2">Dra. Ana Silva</option>
+                  <option value="3">Dr. Carlos Mendes</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="schedule">Agenda Disponível</label>
+              <div class="select-wrapper">
+                <div class="select-icon calendar-icon"></div>
+                <select id="schedule" name="schedule">
+                  <option value="1">Setembro 2025</option>
+                  <option value="2">Outubro 2025</option>
+                  <option value="3">Novembro 2025</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          
+          <div class="calendar-section">
+            <div class="calendar">
+              <div class="calendar-header">
+                <button class="prev-month" aria-label="Mês anterior">&lt;</button>
+                <h3>Setembro 2025</h3>
+                <button class="next-month" aria-label="Próximo mês">&gt;</button>
+              </div>
+              
+              <div class="weekdays">
+                <div>DOM</div>
+                <div>SEG</div>
+                <div>TER</div>
+                <div>QUA</div>
+                <div>QUI</div>
+                <div>SEX</div>
+                <div>SAB</div>
+              </div>
+              
+              <div class="days">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day">8</div>
+                <div class="day">9</div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+                <div class="day">12</div>
+                <div class="day">13</div>
+                <div class="day">14</div>
+                <div class="day">15</div>
+                <div class="day">16</div>
+                <div class="day">17</div>
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">29</div>
+                <div class="day">30</div>
+                <div class="day">31</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="doctor-info">
+            <div class="doctor-avatar"></div>
+            <div class="doctor-details">
+              <p><strong>Nome:</strong> Paulo Muzy</p>
+              <p><strong>Sala:</strong> 1008 A</p>
+              <p><strong>Especialidade:</strong> Pediatria</p>
+              <p><strong>Horário:</strong> 12:00 - 20:00</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="button-container">
+          <button class="schedule-button">Agendar</button>
+        </div>
+      </div>
+    </main>
+    
+    <div class="accessibility-panel">
+      <button class="accessibility-btn" id="screenReaderBtn" aria-label="Toggle speaker mode">
+        <img src="../assets/alto-falante.png" alt="Médicos" class="healthcare-image">
+      </button>
+      <button class="accessibility-btn" id="accessibilityBtn" aria-label="Accessibility mode">
+        <img src="../assets/acessibilidade.png" alt="Médicos" class="healthcare-image">
+      </button>
+    </div>
+  </div>
+  <script>
+    function formatOption(option) {
+      if (!option.id) return option.text;
+      const imgSrc = $(option.element).data('image');
+      return $(`<span class="flag-option"><img src="${imgSrc}" alt="flag"> ${option.text}</span>`);
+    }
+    $(document).ready(function() {
+      $('#language-select').select2({
+        templateResult: formatOption,
+        templateSelection: formatOption,
+        minimumResultsForSearch: -1
+      });
+    });
+  </script>
+</body>
+</html>

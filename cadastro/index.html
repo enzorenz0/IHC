@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="../assets/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthCore - Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components/form.css">
+    <link rel="stylesheet" href="components/branding.css">
+    <link rel="stylesheet" href="components/accessibility.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="branding-column">
+        <div class="logo-container">
+          <img src="../assets/logo 2.png" alt="HealthCore Logo" class="logo-image" />
+        </div>
+      </div>
+      <div class="form-column">
+        <div class="form-container">
+          <h2>Cadastro:</h2>
+          <form id="registration-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nome">Nome <span class="required">*</span></label>
+                <input type="text" id="nome" name="nome" required>
+              </div>
+              <div class="form-group">
+                <label for="cpf">CPF <span class="required">*</span></label>
+                <input type="text" id="cpf" name="cpf" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="cep">CEP <span class="required">*</span></label>
+                <input type="text" id="cep" name="cep" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="endereco">Endereço <span class="required">*</span></label>
+                <input type="text" id="endereco" name="endereco" required>
+              </div>
+              <div class="form-group">
+                <label for="data-nascimento">Data nascimento <span class="required">*</span></label>
+                <input type="date" id="data-nascimento" name="data-nascimento" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="senha">Senha <span class="required">*</span></label>
+                <input type="password" id="senha" name="senha" required>
+              </div>
+              <div class="form-group">
+                <label for="telefone">Telefone <span class="required">*</span></label>
+                <input type="tel" id="telefone" name="telefone" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group full-width">
+                <label for="confirmar-senha">Confirmar senha <span class="required">*</span></label>
+                <input type="password" id="confirmar-senha" name="confirmar-senha" required>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">Salvar</button>
+            </div>
+          </form>
+        </div>
+        <div class="accessibility-panel">
+          <button class="accessibility-btn" id="screenReaderBtn" aria-label="Toggle speaker mode">
+            <img src="../assets/alto-falante.png" alt="Médicos" class="healthcare-image">
+          </button>
+          <button class="accessibility-btn" id="accessibilityBtn" aria-label="Accessibility mode">
+            <img src="../assets/acessibilidade.png" alt="Médicos" class="healthcare-image">
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/form-validation.js"></script>
+    <script src="scripts/accessibility.js"></script>
+  </body>
+</html>
