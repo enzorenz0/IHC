@@ -165,21 +165,36 @@
   text-decoration: underline;
 }
 
-.login-btn {
-  width: 100%;
-  padding: var(--spacing-md);
-  background-color: var(--secondary-color);
-  color: var(--white);
+.login-btn,
+.btn-primary,
+.schedule-button {
+  background-color: #5499D1;
+  color: #fff;
   border: none;
-  border-radius: var(--border-radius-md);
-  font-weight: var(--font-weight-semibold);
-  transition: background-color var(--transition-fast);
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: var(--spacing-md);
+  width: 100%;
+  height: 60px;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: 0 2px 5px rgba(74, 137, 220, 0.15);
   margin-bottom: var(--spacing-lg);
-  font-size: var(--font-size-lg)
 }
 
-.login-btn:hover {
-  background-color: var(--primary-dark);
+.login-btn:hover,
+.btn-primary:hover,
+.schedule-button:hover {
+  background-color: #357abD;
+  color: #fff;
+}
+
+.login-btn:active,
+.btn-primary:active,
+.schedule-button:active {
+  background-color: #2d639e;
+  color: #fff;
 }
 
 .divider {
@@ -216,6 +231,12 @@
 .register-link:hover {
   background-color: var(--gray-light);
   border-color: var(--primary-dark);
+}
+
+.register-btn-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .accessibility-panel {

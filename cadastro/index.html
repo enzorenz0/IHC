@@ -92,7 +92,8 @@
   <script src="scripts/accessibility.js"></script>
 </body>
 <script>
-  document.getElementById("cadastroBtn").addEventListener("click", function () {
+  document.getElementById("registration-form").addEventListener("submit", function (e) {
+    e.preventDefault();
     window.location.href = "../home/index.html";
   });
 </script>

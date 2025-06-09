@@ -28,7 +28,7 @@ body {
   border: 1px solid #eeeeee;
   background-color: #f1f1f1;
   opacity: 50%;
-  color: white;
+  color: #000; /* preto */
   border-radius: 12px;
   height: 60px;
   width: 350px;

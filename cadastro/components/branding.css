@@ -34,8 +34,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 120px;
-  height: 120px;
+  width: 400px;
+  height: 400px;
   margin: 0 auto var(--spacing-lg);
   object-fit: contain;
 }
@@ -62,8 +62,8 @@
 @media (max-width: 768px) {
   .logo-container img,
   .logo-image {
-    width: 80px;
-    height: 80px;
+    width: 180px;
+    height: 180px;
     margin-bottom: var(--spacing-sm);
   }
   
